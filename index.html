@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch2 Lecture 63 innerHTML and input Value</title>
+
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <div id="id1">Ankit Tanwar</div>
+    <p id="mypara"></p>
+    <p id="mypara2"></p>
+
+    <form>
+        <label for="fullname">
+            <input type="text" name="fullname" >
+
+        </label>
+    </form>
+
+    <select name="select" id="sel1">
+        <option>male</option>
+        <option>female</option>
+        <option>other</option>
+    </select>
+    <button onclick="save()">okk</button>
+
+    <button onclick="okLabs()">click Me</button>
+
+    <script>
+
+        //1 function defiantion
+        function okLabs(){
+          
+            let x= document.getElementById('id1').innerHTML  ;
+
+            let y= document.getElementById('mypara').innerHTML= 'hello'+' '+x;
+
+           let eml= document.querySelector('input[name="fullname"]').value= x;
+
+        }
+
+        function save(){
+
+            var b = document.querySelector('input[name="fullname"]').value;
+            let a=  document.getElementById('sel1').value;
+            console.log(a);
+
+            console.log(b);
+
+
+            document.getElementById('mypara').innerHTML= b;
+            document.getElementById('mypara2').innerHTML= a;
+
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
